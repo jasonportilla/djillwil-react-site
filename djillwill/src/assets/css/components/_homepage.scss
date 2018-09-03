@@ -1,0 +1,48 @@
+.homepage {
+  position: relative;
+  background-image: url('../images/main-back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  .homepage-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 2;
+    .homepage-social-media {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      color: $color-primary;
+      font-size: 25px;
+      margin-right: $base-spacing * 5;
+      margin-top: $base-spacing * 2;
+      li {
+        margin-right: $base-spacing * 5;
+      }
+    }
+    .homepage-main {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .homepage-nav {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        color: $color-primary;
+        margin-top: $base-spacing * 3;
+        font-size: 20px;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .logo-name {
+      width: 600px;
+    }
+  }
+}

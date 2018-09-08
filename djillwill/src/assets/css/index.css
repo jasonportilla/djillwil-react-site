@@ -20,29 +20,29 @@
   color: #BBC4C9; }
 
 .text-success {
-  color: #60C594; }
+  color: #BDD9BF; }
 
 .text-info {
-  color: #6097BA; }
+  color: #41AFCE; }
 
 .text-warning {
-  color: #FFC57C; }
+  color: #FDE74C; }
 
 .text-danger {
-  color: #FF6D6D; }
+  color: #BB0A21; }
 
 /* Contextual backgrounds */
 .bg-muted {
-  background-color: #ededed; }
+  background-color: #BBC4C9; }
 
 .bg-success {
-  background-color: #60C594; }
+  background-color: #BDD9BF; }
 
 .bg-info {
-  background-color: #6097BA; }
+  background-color: #41AFCE; }
 
 .bg-warning {
-  background-color: #FF6D6D; }
+  background-color: #BB0A21; }
 
 html {
   font-size: 1em; }
@@ -103,7 +103,7 @@ h5, .h5 {
     padding-bottom: 8px; }
 
 h6, .h6 {
-  font-family: 'Lato-Regular';
+  font-family: 'Lato';
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 0;
@@ -829,15 +829,15 @@ button.mainButton {
     .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary:active:hover, .btn.btn-primary.active:hover, .btn:not(.btn-link).btn-primary:active, .btn:not(.btn-link).btn-primary.active, .btn:not(.btn-link).btn-primary:active:hover, .btn:not(.btn-link).btn-primary.active:hover {
       background-image: linear-gradient(to bottom, #006F7B 0%, #006F7B 100%); }
   .btn:not(.btn-link):disabled, .btn:not(.btn-link)[disabled], .btn:not(.btn-link):not(.btn-link):disabled, .btn:not(.btn-link):not(.btn-link)[disabled] {
-    background: #81898E;
-    background-color: #81898E;
-    border: 1px solid #81898E;
+    background: #D3D4D9;
+    background-color: #D3D4D9;
+    border: 1px solid #D3D4D9;
     color: #FFF;
     cursor: not-allowed; }
     .btn:not(.btn-link):disabled:hover, .btn:not(.btn-link):disabled:focus, .btn:not(.btn-link):disabled:active, .btn:not(.btn-link):disabled:active:hover, .btn:not(.btn-link)[disabled]:hover, .btn:not(.btn-link)[disabled]:focus, .btn:not(.btn-link)[disabled]:active, .btn:not(.btn-link)[disabled]:active:hover, .btn:not(.btn-link):not(.btn-link):disabled:hover, .btn:not(.btn-link):not(.btn-link):disabled:focus, .btn:not(.btn-link):not(.btn-link):disabled:active, .btn:not(.btn-link):not(.btn-link):disabled:active:hover, .btn:not(.btn-link):not(.btn-link)[disabled]:hover, .btn:not(.btn-link):not(.btn-link)[disabled]:focus, .btn:not(.btn-link):not(.btn-link)[disabled]:active, .btn:not(.btn-link):not(.btn-link)[disabled]:active:hover {
-      background: #81898E;
-      background-color: #81898E;
-      border: 1px solid #81898E;
+      background: #D3D4D9;
+      background-color: #D3D4D9;
+      border: 1px solid #D3D4D9;
       color: #FFF;
       cursor: not-allowed; }
   .btn.btn-secondary, .btn:not(.btn-link).btn-secondary {
@@ -875,7 +875,7 @@ button.mainButton {
   vertical-align: middle; }
 
 .table tbody tr:nth-child(2n) {
-  background-color: #ededed; }
+  background-color: #BBC4C9; }
 
 /* Pre-Loader */
 .hideLoader {
@@ -990,7 +990,7 @@ button.mainButton {
   outline: 0; }
 
 .App {
-  background-color: #EFF4F7;
+  background-color: #D3D4D9;
   margin: 0;
   height: 100vh; }
   .App .app-content {
@@ -1204,13 +1204,82 @@ button.mainButton {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
+        font-weight: lighter;
         color: #41AFCE;
         margin-top: 24px;
-        font-size: 20px; }
-        .homepage .homepage-overlay .homepage-main .homepage-nav a {
+        font-size: 20px;
+        font-family: "$mdb-font-family"; }
+        .homepage .homepage-overlay .homepage-main .homepage-nav .main-nav {
+          padding: 0 0 10px;
+          position: relative;
           text-decoration: none; }
-    .homepage .homepage-overlay .logo-name {
-      width: 600px; }
+        .homepage .homepage-overlay .homepage-main .homepage-nav .main-nav::after {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          content: '';
+          opacity: 0;
+          -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+          -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+          transition: height 0.3s, opacity 0.3s, transform 0.3s;
+          -webkit-transform: translateY(-10px);
+          -moz-transform: translateY(-10px);
+          transform: translateY(-10px); }
+        .homepage .homepage-overlay .homepage-main .homepage-nav .main-nav:hover::after,
+        .homepage .homepage-overlay .homepage-main .homepage-nav .main-nav:focus::after {
+          height: 5px;
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+          -moz-transform: translateY(0px);
+          transform: translateY(0px); }
+        .homepage .homepage-overlay .homepage-main .homepage-nav .main-nav:hover {
+          color: #999999; }
+      .homepage .homepage-overlay .homepage-main .logo-name {
+        width: 600px; }
+
+.track-list {
+  padding-top: 70px;
+  background: white;
+  height: 700px; }
+  .track-list .track-list-img {
+    width: 160px;
+    height: 160px; }
+  .track-list .track-list-songs {
+    border: 2px solid #252627;
+    min-height: 200px;
+    padding-bottom: 25px; }
+    .track-list .track-list-songs .play-tracks-btn {
+      background: #252627;
+      color: white; }
+    .track-list .track-list-songs .artist-info {
+      margin-bottom: 0;
+      color: #7BDFF2;
+      font-weight: 200; }
+    .track-list .track-list-songs .song-list {
+      border-bottom: 1px solid #252627;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      .track-list .track-list-songs .song-list .play-icon {
+        color: #41AFCE; }
+  .track-list .song-title {
+    width: 100%;
+    margin-left: 15px;
+    color: #252627;
+    font-weight: 100; }
+  .track-list .song-social-media {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 15px;
+    margin-top: 24px; }
+    .track-list .song-social-media li {
+      color: #41AFCE;
+      margin-right: 16px; }
 
 /*! nouislider - 10.0.0 - 2016-12-10 16:00:32 */
 /* Functional styling;

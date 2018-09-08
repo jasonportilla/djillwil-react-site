@@ -1,0 +1,51 @@
+.track-list {
+  padding-top: 70px;
+  background: white;
+  height: 700px;
+  .track-list-img {
+    width: 160px;
+    height: 160px;
+  }
+  .track-list-songs {
+    border: 2px solid #252627;
+    .play-tracks-btn {
+      background: #252627;
+      color: white;
+    }
+    .artist-info {
+      margin-bottom: 0;
+      color: #7BDFF2;
+      font-weight: 200;
+    }
+    min-height: 200px;
+    padding-bottom: 25px;
+    .song-list {
+      border-bottom: 1px solid #252627;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .play-icon {
+        color: $color-primary;
+      }
+    }
+  }
+  .song-title {
+    width: 100%;
+    margin-left: 15px;
+    color: #252627;
+    font-weight: 100;
+  }
+  .song-social-media {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 15px;
+    margin-top: $base-spacing * 3;
+    li {
+      color: $color-primary;
+      margin-right: 16px;
+    }
+  }
+
+}
